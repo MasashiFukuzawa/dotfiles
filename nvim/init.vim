@@ -64,6 +64,9 @@ set splitright
 set noequalalways
 " コマンドモードの補完
 set wildmenu
+" クオーテーションの補完
+inoremap ' ''<LEFT>
+inoremap " ""<LEFT>
 " vimに全角を解釈させる
 set ambiwidth=double
 " バックスペースで何でも消せるようにする
