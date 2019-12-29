@@ -1,0 +1,74 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+# ファイルオープンを便利に
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+# Unite.vimで最近使ったファイルを表示できるようにする
+repo    = 'Shougo/neomru.vim'
+depends = 'Shougo/unite.vim'
+
+[[plugins]]
+# ファイルをtree表示してくれる
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+# Gitを便利に使う
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+# Gitで管理しているファイル編集時に差分を表現する記号が左端に表示され
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+# Rails向けのコマンドを提供する
+repo = 'tpope/vim-rails'
+
+[[plugins]]
+# Ruby向けにendを自動挿入してくれる
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+# コメントON/OFFを手軽に実行
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+# シングルクオートとダブルクオートの入れ替え等
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+# インデントに色を付けて見やすくする
+repo = 'nathanaelkane/vim-indent-guides'
+
+[[plugins]]
+# ログファイルを色づけしてくれる
+repo = 'vim-scripts/AnsiEsc.vim'
+
+[[plugins]]
+# 行末の半角スペースを可視化
+repo = 'bronson/vim-trailing-whitespace'
+
+[[plugins]]
+# RubyMineのように自動保存する
+repo = '907th/vim-auto-save'
+
+[[plugins]]
+# CSVをカラム単位に色分けする
+repo = 'mechatroner/rainbow_csv'
+
+[[plugins]]
+# 補完機能
+repo = 'Shougo/neocomplete.vim'
+
+[[plugins]]
+# colorscheme tender setting
+repo = 'jacoborus/tender.vim'
+hook_add = '''
+    colorscheme tender
+    set background=dark
+    syntax on
+    set t_Co=256
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+'''
