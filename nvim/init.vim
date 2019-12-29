@@ -1,3 +1,4 @@
+
 " ==============
 "  key bind
 " ==============
@@ -31,6 +32,7 @@ inoremap <C-j> <Down>
 " editor setting
 " ==============
 
+" エンコードの指定
 set encoding=utf-8
 " タグファイルの指定
 set tags=~/.tags
@@ -74,6 +76,8 @@ set list
 set showmatch
 " 構文毎に文字色を変化させる
 syntax on
+" vim上でコピーした内容をクリップボードにもコピー
+set clipboard+=unnamed
 " クラッシュ防止
 set synmaxcol=200
 " カーソルの位置表示
@@ -179,6 +183,19 @@ let g:auto_save = 1
 """"""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
+" マークダウン編集用の設定
+""""""""""""""""""""""""""""""
+autocmd BufRead,BufNewFile *.mkd  set filetype=markdown
+autocmd BufRead,BufNewFile *.md  set filetype=markdown
+" Need: kannokanno/previm
+" Ctrl-pでプレビュー
+nnoremap <silent> <C-p> :PrevimOpen<CR>
+" 自動で折りたたまないようにする
+let g:vim_markdown_folding_disabled = 1
+let g:previm_enable_realtime = 1
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
 " 全角スペースの表示
 """"""""""""""""""""""""""""""
 function! ZenkakuSpace()
@@ -247,6 +264,9 @@ imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
 """"""""""""""""""""""""""""""
+
+" pluginの削除
+" call map(dein#check_clean(), "delete(v:val, 'rf')")
 
 " filetypeの自動検出(最後の方に書いた方がいいらしい)
 filetype on
