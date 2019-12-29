@@ -1,4 +1,3 @@
-
 " ==============
 "  key bind
 " ==============
@@ -67,6 +66,13 @@ set wildmenu
 " クオーテーションの補完
 inoremap ' ''<LEFT>
 inoremap " ""<LEFT>
+" xで削除した時はヤンクしない
+vnoremap x "_x
+nnoremap x "_x
+" 1 で行頭に移動
+nnoremap 1 0
+" 2で行末に移動
+nnoremap 2 $
 " vimに全角を解釈させる
 set ambiwidth=double
 " バックスペースで何でも消せるようにする
