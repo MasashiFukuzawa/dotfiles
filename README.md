@@ -51,3 +51,9 @@ $ cd .. && rm -rf iterm2-material-design`
   - `.config/nvim/dein.toml`に毎度読み込むプラグインを記述
   - ここには設定詳細は書かない
   - 最初躓いた
+
+# 7. Tmux設定
+- [tmuxを必要最低限で入門して使う](https://qiita.com/nl0_blu/items/9d207a70ccc8467f7bab)を参考に設定
+- tmuxのバージョンアップに伴い、何点か修正が必要な点に注意
+ - [.tmux.conf:16: unknown key : split-window .. And pluggins no longer work. #1990](https://github.com/tmux/tmux/issues/1990)
+ - [tmux v2.9 マイグレーションガイド 〜 tmux をv2.9 に上げたらinvalid option エラーが出た](https://qiita.com/TsutomuNakamura/items/663b8e456768f29e37ed)
