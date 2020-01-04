@@ -69,10 +69,6 @@ inoremap " ""<LEFT>
 " xで削除した時はヤンクしない
 vnoremap x "_x
 nnoremap x "_x
-" 1 で行頭に移動
-nnoremap 1 0
-" 2で行末に移動
-nnoremap 2 $
 " vimに全角を解釈させる
 set ambiwidth=double
 " バックスペースで何でも消せるようにする
@@ -180,6 +176,12 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 """"""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""
+" NerdTreeの設定
+""""""""""""""""""""""""""""""
+nnoremap <silent><C-e> :NERDTree<CR>
+""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""
 " vim-indent-guidesの設定
 """"""""""""""""""""""""""""""
 let g:indent_guides_enable_on_vim_startup = 1
@@ -197,8 +199,7 @@ let g:auto_save = 1
 autocmd BufRead,BufNewFile *.mkd  set filetype=markdown
 autocmd BufRead,BufNewFile *.md  set filetype=markdown
 " Need: kannokanno/previm
-" Ctrl-pでプレビュー
-nnoremap <silent> <C-p> :PrevimOpen<CR>
+nnoremap <silent> <C-m> :PrevimOpen<CR>
 " 自動で折りたたまないようにする
 let g:vim_markdown_folding_disabled = 1
 let g:previm_enable_realtime = 1
@@ -272,6 +273,7 @@ endif
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
+imap | ||<LEFT>
 """"""""""""""""""""""""""""""
 
 " pluginの削除
