@@ -273,7 +273,6 @@ endif
 imap { {}<LEFT>
 imap [ []<LEFT>
 imap ( ()<LEFT>
-imap | ||<LEFT>
 """"""""""""""""""""""""""""""
 
 " pluginの削除
