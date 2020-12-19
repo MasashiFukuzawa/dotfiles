@@ -1,0 +1,389 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入しますauto[]
+[
+  {
+    "key": "shift+cmd+d",
+    "command": "editor.action.deleteLines",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+d",
+    "command": "-workbench.view.debug"
+  },
+  {
+    "key": "cmd+y",
+    "command": "editor.action.webvieweditor.redo",
+    "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-editor.action.webvieweditor.redo",
+    "when": "!editorFocus && !inputFocus && activeEditor == 'WebviewEditor'"
+  },
+  {
+    "key": "cmd+y",
+    "command": "editor.action.webvieweditor.redo",
+    "when": "!editorFocus && !inputFocus && activeEditor == 'workbench.editor.htmlPreviewPart'"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-editor.action.webvieweditor.redo",
+    "when": "!editorFocus && !inputFocus && activeEditor == 'workbench.editor.htmlPreviewPart'"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "redo",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+z",
+    "command": "-redo",
+    "when": "textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "cursorBottomSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+down",
+    "command": "-cursorBottomSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "workbench.action.terminal.selectToNextCommand",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+down",
+    "command": "-workbench.action.terminal.selectToNextCommand",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "workbench.action.terminal.selectToPreviousCommand",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+cmd+up",
+    "command": "-workbench.action.terminal.selectToPreviousCommand",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "cursorTopSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "shift+cmd+up",
+    "command": "-cursorTopSelect",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "cursorTop",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "-cursorTop",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "list.collapse",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "-list.collapse",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "search.action.focusSearchFromResults",
+    "when": "firstMatchFocus && searchViewletVisible"
+  },
+  {
+    "key": "cmd+up",
+    "command": "-search.action.focusSearchFromResults",
+    "when": "firstMatchFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+up",
+    "command": "search.focus.previousInputBox",
+    "when": "inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "-search.focus.previousInputBox",
+    "when": "inputBoxFocus && searchViewletVisible && !searchInputBoxFocus"
+  },
+  {
+    "key": "alt+up",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+up",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "cursorBottom",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-cursorBottom",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "alt+down",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-list.select",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "alt+down",
+    "command": "problems.action.focusProblemsFromFilter",
+    "when": "problemsFilterFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-problems.action.focusProblemsFromFilter",
+    "when": "problemsFilterFocus"
+  },
+  {
+    "key": "alt+down",
+    "command": "search.focus.nextInputBox",
+    "when": "inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-search.focus.nextInputBox",
+    "when": "inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "alt+down",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "cmd+l",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+k",
+    "command": "-workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  // 追記
+  {
+    "key": "cmd+enter",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorTextFocus"
+  },
+  {
+  "key": "cmd+enter",
+  "command": "workbench.action.focusFirstEditorGroup",
+  "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+enter",
+    "command": "editor.action.insertLineAfter",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "-editor.action.insertLineAfter",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+0",
+    "command": "-workbench.action.focusSideBar"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.lastEditorInGroup"
+  },
+  {
+    "key": "cmd+9",
+    "command": "-workbench.action.lastEditorInGroup"
+  },
+  {
+    "key": "shift+alt+cmd+\\",
+    "command": "extension.runFileSpecs"
+  },
+  {
+    "key": "shift+cmd+t",
+    "command": "-extension.runFileSpecs"
+  },
+  // vim settings
+  // ref. https://kamino.hatenablog.com/entry/vscode_alike_neovim
+  // ref. https://qiita.com/Kyou13/items/d3dffecbba5b89e8b771
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.nextEditor",
+    "when": "!terminalFocus && !sideBarFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.previousEditor",
+    "when": "!terminalFocus && !sideBarFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "deleteRight",
+    "when": "editorTextFocus && vim.active && !inDebugRepl'"
+  },
+  {
+    "key": "alt+cmd+k",
+    "command": "editor.action.insertCursorAbove",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  {
+    "key": "alt+cmd+j",
+    "command": "editor.action.insertCursorBelow",
+    "when": "editorTextFocus && vim.active && !inDebugRepl"
+  },
+  // NERD Tree風
+  // サイドバーの表示トグル(サイドバーの表示・非表示)
+  {
+    "key": "ctrl+k ctrl+s",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "!filesExplorerFocus"
+  },
+  {
+      "key": "ctrl+k ctrl+s",
+      "command": "workbench.action.toggleSidebarVisibility",
+      "when": "filesExplorerFocus"
+  },
+  // サイドバーフォーカストグル(サイドバーは表示したまま，フォーカスを切り替え)
+  {
+      "key": "ctrl+k ctrl+s",
+      "command": "workbench.action.focusSideBar",
+      "when": "editorFocus"
+  },
+  {
+      "key": "ctrl+k ctrl+s",
+      "command": "workbench.action.focusFirstEditorGroup",
+      "when": "!editorFocus"
+  },
+  // ファイルの時は"Enter" or "o"で同一タブで表示
+  {
+      "key": "Enter",
+      "command": "list.select",
+      "when": "explorerViewletFocus && explorerViewletVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  {
+      "key": "o",
+      "command": "list.select",
+      "when": "explorerViewletFocus && explorerViewletVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  //
+  // フォルダのときは"Enter" or "o"で展開
+  {
+      "key": "Enter",
+      "command": "list.toggleExpand",
+      "when": "explorerViewletFocus && explorerViewletVisible && explorerResourceIsFolder && !inputFocus"
+  },
+  // "s"で別ウィンドウで開く
+  {
+      "key": "s",
+      "command": "explorer.openToSide",
+      "when": "explorerViewletFocus && explorerViewletVisible && !explorerResourceIsFolder && !inputFocus"
+  },
+  // --- ファイルシステム系 ---
+  // "m + r"でリネーム
+  {
+      "key": "m r",
+      "command": "renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // "m + c"でコピー
+  {
+      "key": "m c",
+      "command": "filesExplorer.copy",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // "m + p"でペースト
+  {
+      "key": "m p",
+      "command": "filesExplorer.paste",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // "m + a"でファイル追加
+  {
+      "key": "m a",
+      "command": "explorer.newFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // "m + d"で削除
+  {
+      "key": "m d",
+      "command": "deleteFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  // "m + f"でフォルダ追加
+  {
+      "key": "m f",
+      "command": "explorer.newFolder",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+]
