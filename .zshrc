@@ -40,12 +40,21 @@ autoload -U compinit && compinit -u
 
 alias g='git'
 alias gaa='git add .'
+alias gap='git add -p'
+alias gc='git commit'
 alias gcm='git commit -m'
-alias gp='git push origin'
-alias gch='git checkout'
-alias gr='git reset --soft ~HEAD'
+alias gp='git push origin HEAD'
+alias gsw='git switch'
+alias gchb='git checkout -b'
 alias gb='git branch'
-alias gf='git fetch'
+alias gf='git fetch -p'
+alias gs='git status'
+alias gl='git log'
+alias gll='git log --oneline'
+alias gd='git diff'
+alias gm='git merge --no-ff'
+alias gri='git rebase -i'
+alias gb-delete="git branch --merged | egrep -v '\*|deploy/staging|deploy/production|master' | xargs git branch -d"
 alias v='nvim'
 alias vi='nvim'
 alias vim='nvim'
@@ -56,10 +65,46 @@ alias so='source'
 alias be='bundle exec'
 alias rs='bundle exec rails s'
 alias rc='bundle exec rails c'
+alias r='bundle exec rspec'
+alias erd='bundle exec erd --notation=uml --attributes=primary_keys,foreign_keys,content'
 alias di='docker images'
 alias dc='docker container'
 alias de='docker exec -it'
 alias doco='docker-compose'
+alias t='tmux'
+alias s='measurement start'
+alias e='measurement stop'
+
+function measurement() {
+  config_path="${HOME}/.development_efficiency_measurement/config"
+  url=`cat ${config_path} | grep url | sed s/url=// | awk '{ print }'`
+  token=`cat ${config_path} | grep token | sed s/token=// | awk '{ print }'`
+  user_id=`cat ${config_path} | grep user_id | sed s/user_id=// | awk '{ print }'`
+  user_name=`cat ${config_path} | grep user_name | sed s/user_name=// | awk '{ print }'`
+  curl -L "${url}?token=${token}&user_id=${user_id}&user_name=${user_name}&text=$1" \
+    -sS -d "" -H "Content-Type: application/json" | jq
+}
+
+function extract() {
+  case $1 in
+    *.tar.gz|*.tgz) tar xzvf $1;;
+    *.tar.xz) tar Jxvf $1;;
+    *.zip) unzip $1;;
+    *.lzh) lha e $1;;
+    *.tar.bz2|*.tbz) tar xjvf $1;;
+    *.tar.Z) tar zxvf $1;;
+    *.gz) gzip -d $1;;
+    *.bz2) bzip2 -dc $1;;
+    *.Z) uncompress $1;;
+    *.tar) tar xvf $1;;
+   *.arj) unarj $1;;
+    *.7z) 7z x $1;;
+  esac
+}
+alias -s {gz,tgz,zip,lzh,bz2,tbz,Z,tar,arj,xz,7z}=extract
+for file in $(ls -1); do
+  extract $file;
+done
 
 # 文字コードの指定
 export LANG=ja_JP.UTF-8
@@ -112,5 +157,3 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 # 追加したソフトやパッケージ用のコマンドのパスを通す
 eval "$(anyenv init -)"
-
-
